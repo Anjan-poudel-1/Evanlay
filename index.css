@@ -1,9 +1,6 @@
 html{
   scroll-behavior: smooth;
 }
-
-
-
 body{
     margin:0;
     padding: 0;
@@ -142,7 +139,6 @@ h1{
 }
 .nav{
   
-    background-color: none;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -187,13 +183,11 @@ h1{
 .selectedmenu{
 width: 65%;
 border-radius: 240px;
-scale: 1.1;
+
 }
 .selected{
     color: #198791;
-   
 }
-
 .sideitem ul li a, .navlinks ul li a{
     text-decoration: none;
     color: black;
@@ -253,16 +247,13 @@ scale: 1.1;
     background-color: teal;
     width: 0;
     height: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     z-index: 98;
     right: 0;
     transition:width 0.75s ease-in-out;
    
 }
-
-
-
 .sideitem{
     height: 100%;
     width: 200px;
@@ -455,7 +446,7 @@ padding: 30px;
     padding: 30px;
     display: flex;
     justify-content: center;
-    align-items: center;
+   
   
 }
 .accordian .image{
@@ -479,7 +470,7 @@ padding: 30px;
     margin-top: 40px;
    
     width: 100%;
-    height: 400px;
+    height: 100%;
 }
 .question{
     position: relative;
@@ -502,8 +493,9 @@ padding: 30px;
     position: relative;
     width: 90%;
     height: 0;
+    visibility: hidden;
     opacity: 0;
-    transition: 0.3s ease;
+   transition: opacity 0.6s ease;
     display: flex;
     align-items: center;
     border-top: 1px solid rgba(128, 128, 128, 0.562);
@@ -511,6 +503,7 @@ padding: 30px;
 .qn{
     outline: none;
     background-color: transparent;
+    
     border: none;
     margin-right: 20px;
     color: rgb(108, 184, 184);
@@ -523,8 +516,9 @@ transition:transform 0.3s ease ;
    
 }
 .showans{
-    height: 25px;
+    height: 100%;
     opacity: 1;
+    visibility: visible;
     margin-bottom: 8px;
 }
 .changebtn{
@@ -569,7 +563,6 @@ transition:transform 0.3s ease ;
     border-radius: 50%;
     border: 5px solid gray;
     margin: 20px;
-    background-color: none;
     cursor: pointer;
     transition: 0.4s ease-in-out;
     display: flex;
@@ -909,8 +902,6 @@ color: white;
 font-size: 13px;
 }
 
-
-
 /* THESE ARE OF OTHERPAGES */
 .otherpage_head{
     height: 180px;
@@ -932,8 +923,6 @@ font-size: 13px;
     letter-spacing: 3px;
     font-size: 45px;
 }
-
-
 
 /* GALARY */
 
@@ -969,7 +958,6 @@ margin:0 20px 50px 25px;
 
 .image-backdrop{
     height: 0%;
-    
     width: 100%;
     position: absolute;
     top: 0;
@@ -977,7 +965,6 @@ margin:0 20px 50px 25px;
     transition: 0.5s ease-in-out;
     background-color: rgba(238, 238, 238, 0.849);
 }
-
 
 .image-wrap .image-backdrop .data{
     opacity: 0;
@@ -988,7 +975,6 @@ margin:0 20px 50px 25px;
    padding-top: 0;
 visibility: hidden;
 transition: 0.3s ease-in;
-
 }
 
 .image-wrap .image-backdrop .data .fa-plus-circle{
@@ -998,7 +984,6 @@ transition: 0.3s ease-in;
     margin-top: 15px;
     cursor: pointer;
     color: rgb(16, 133, 133);
-
 }
 
 .image-wrap:hover .image-backdrop{
@@ -1794,9 +1779,7 @@ justify-content: center;
  .question_wrap h2 {
     margin-top: 60px;
 }
-.questions{
-    height: 100%;
-}
+
 .consultation{
     flex-direction: column;
 }
@@ -2143,7 +2126,7 @@ justify-content: space-around;
         right:-42px;
     }
     .content .sliderbtn{
-        letter-spacing:auto;
+        letter-spacing:1px;
         padding: 10px 12px;
         font-size: 12px;
     }
@@ -2156,7 +2139,7 @@ justify-content: space-around;
     }
       .sliderimagewrap .slide .content h1{
         font-size: 28px;
-        letter-spacing: 1px;
+        letter-spacing: 0px;
      
       margin:10px auto 25px auto;
       line-height: 40px;
@@ -2180,8 +2163,9 @@ justify-content: space-around;
 
     .consultation-wrap{
         margin: 40px 0;
+        height: 200px;
+        padding-bottom: 20px;
     }
-   
     .hamclick_side{
         width: 70%;
         }
@@ -2204,15 +2188,10 @@ justify-content: space-around;
         .question_wrap h2 {
             margin-top: 30px;
         }
-
-        
          .pages ul,.contact ul,.follow ul{
              padding-left: 0;
              display: block;
-
          }
-
-
          .que{
              font-size: 16px;
          }
@@ -2232,6 +2211,9 @@ justify-content: space-around;
         }
 
         /* Gallery */
+        .gallery-section .image-wrap{
+            width: 300px;
+        }
 
         .gallery-section .image-wrap .image  img{
             width: 300px;

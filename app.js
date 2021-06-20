@@ -19,8 +19,7 @@ let timer = 6000;
 let myVar = null;
 let executed = 0 ;
 
-console.log(rollupNumber);
-console.log(rollupArr);
+
 
 
 
@@ -33,9 +32,6 @@ function initializeinterval(){
 if(nextbtn){
    
     initializeinterval();
-}
-else{
-    console.log(nextbtn)  
 }
 
 
@@ -67,8 +63,7 @@ function resetimage(id,previmg){
 function shownext(){
     resetTimer();
 imagetrack++;
-    console.log("next clicked");
-    console.log(imagetrack);
+  
     if(imagetrack>2){
         imagetrack=0
     }
@@ -77,7 +72,7 @@ resetimage(imagetrack,currentdisplay);
 
 function showprev(){
     resetTimer();
-    console.log("prev clicked");
+ 
     imagetrack--;
    
     console.log(imagetrack);
@@ -117,13 +112,13 @@ scrollup.classList.add('showup');
     }
    
     if(scrollValue>=2000 && scrollValue<4000){
-console.log("executedddddddddd...." , executed)
+
 if(executed<=1){
     rollupArr.map(item=>{
         executed++;
             let currentposition = 0 ; 
             let value = (item.innerHTML);
-            console.log(item.innerHTML)
+       
          
             item.innerHTML=currentposition;
           let numberanimate =   setInterval(function(){
