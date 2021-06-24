@@ -20,9 +20,6 @@ let myVar = null;
 let executed = 0 ;
 
 
-
-
-
 // At first we need to initialize interval... 
 // Upon changes, we donot want rapid change as a user might click next or previous button at the end of 4 sec timer.So, initializeinterval is called everytime next image is changed
 
@@ -60,15 +57,19 @@ function resetimage(id,previmg){
     initial=false;
 }
 
+//When next button is clicked
+
 function shownext(){
     resetTimer();
 imagetrack++;
   
-    if(imagetrack>2){
+    if(imagetrack>2){   //imagetrack shows the index of slider image. if it exceeds the max value, again it is set to 0 
         imagetrack=0
     }
 resetimage(imagetrack,currentdisplay);
 }
+
+//When previous button is clicked
 
 function showprev(){
     resetTimer();
@@ -84,21 +85,12 @@ resetimage(imagetrack,currentdisplay);
 
 }
 
-
-
-
-
-
 hamburger_menu.addEventListener('click',togglehamMenu)
 for(let i = 0 ; i <question.length;i++){
     question[i].addEventListener('click',()=>toggleanswer(question[i],ans[i]))
 }
 
 scrollup.addEventListener('click',scrolltotop)
-
-
-
-
 
 document.addEventListener("scroll",function(){
     var scrollValue = window.scrollY;
@@ -132,25 +124,15 @@ if(executed<=1){
             if(value < currentposition){
            clearInterval(numberanimate);
             }
-        
-        
+             
             },15)
         
         
         })
 }
-
-
-
-
     }
     
 })
-
-
-
-
-
 
 function  togglehamMenu(){
 sidenav.classList.toggle("hamclick_side");
